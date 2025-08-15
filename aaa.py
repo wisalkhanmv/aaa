@@ -89,23 +89,65 @@ def autism_screening():
     print(f"\n=== Results ===")
     print(f"Your score: {score}/{total_questions} ({percentage:.1f}%)")
 
-    # Determine result using if-else statements
+    # Determine result using if-else statements with detailed explanations
     if score <= 2:
         print("\nResult: LOW likelihood of autism")
         print("You show very few autistic traits. This is within the typical range.")
+        print("\nReasons for this result:")
+        print("• Your responses indicate typical social communication patterns")
+        print("• You show good understanding of social cues and expectations")
+        print("• Your sensory processing appears to be within normal ranges")
+        print("• You demonstrate flexible thinking and adaptability")
+        print("• Your social interactions follow typical patterns")
+
     elif score <= 4:
         print("\nResult: MILD likelihood of autism")
         print(
             "You show some autistic traits, but this is common in the general population.")
+        print("\nReasons for this result:")
+        print("• You may have slight difficulties in certain social situations")
+        print("• Some sensory sensitivities or preferences may be present")
+        print("• You might prefer routine in some areas of life")
+        print("• These traits are common and don't necessarily indicate autism")
+        print("• Many people have similar experiences without being autistic")
+
     elif score <= 6:
         print("\nResult: MODERATE likelihood of autism")
         print("You show several autistic traits. Consider consulting a healthcare professional.")
+        print("\nReasons for this result:")
+        print("• You demonstrate multiple characteristics commonly associated with autism")
+        print("• Your social communication patterns show some differences")
+        print("• Sensory sensitivities or repetitive behaviors may be more noticeable")
+        print("• These traits may be affecting your daily life")
+        print("• Professional evaluation could help clarify your experiences")
+
     elif score <= 8:
         print("\nResult: HIGH likelihood of autism")
         print("You show many autistic traits. It's recommended to seek professional evaluation.")
+        print("\nReasons for this result:")
+        print("• You display a significant number of autistic characteristics")
+        print("• Your social communication shows clear differences from typical patterns")
+        print("• Sensory sensitivities and repetitive behaviors are likely present")
+        print("• These traits probably impact your daily functioning")
+        print("• Professional assessment is strongly recommended for proper support")
+
     else:
         print("\nResult: VERY HIGH likelihood of autism")
         print("You show most autistic traits. Professional evaluation is strongly recommended.")
+        print("\nReasons for this result:")
+        print("• You display the majority of autistic characteristics assessed")
+        print("• Your social communication patterns are significantly different")
+        print("• Sensory processing differences are likely substantial")
+        print("• These traits are probably significantly impacting your life")
+        print("• Immediate professional evaluation is highly recommended")
+        print("• Early diagnosis can lead to better support and accommodations")
+
+    print("\n=== What This Means ===")
+    print("• Higher scores indicate more autistic traits, not necessarily autism itself")
+    print("• Many people have some autistic traits without being autistic")
+    print("• Environmental factors, anxiety, or other conditions can cause similar traits")
+    print("• Only a qualified professional can provide an accurate diagnosis")
+    print("• This screening is just one tool to help guide your next steps")
 
     print("\n=== Important Disclaimer ===")
     print("This screening tool is for informational purposes only and cannot provide a medical diagnosis.")
