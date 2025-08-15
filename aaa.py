@@ -1,72 +1,87 @@
 #!/usr/bin/env python3
+import random
+
 
 def autism_screening():
     print("=== Autism Screening Questionnaire ===\n")
     print("This is a simple screening tool. Please answer the following questions honestly.")
     print("Note: This is NOT a medical diagnosis. Please consult a healthcare professional for proper evaluation.\n")
 
+    # Pool of autism screening questions
+    all_questions = [
+        "Do you find it difficult to understand social cues or body language?",
+        "Do you have intense interests in specific topics that you can talk about for hours?",
+        "Do you prefer routine and get upset when plans change unexpectedly?",
+        "Do you find it challenging to maintain eye contact during conversations?",
+        "Do you have difficulty understanding sarcasm or jokes?",
+        "Do you experience sensory sensitivities (bright lights, loud sounds, certain textures)?",
+        "Do you find it hard to start or maintain conversations with others?",
+        "Do you prefer to spend time alone rather than in social situations?",
+        "Do you have difficulty understanding other people's emotions or feelings?",
+        "Do you engage in repetitive behaviors or movements (rocking, hand flapping, etc.)?",
+        "Do you have difficulty with transitions between activities?",
+        "Do you notice small details that others might miss?",
+        "Do you have a strong need for sameness in your environment?",
+        "Do you find it difficult to understand unwritten social rules?",
+        "Do you have difficulty with flexible thinking or adapting to change?",
+        "Do you experience anxiety in social situations?",
+        "Do you have difficulty understanding metaphors or figurative language?",
+        "Do you prefer to follow strict routines or schedules?",
+        "Do you have difficulty with give-and-take conversations?",
+        "Do you experience meltdowns when overwhelmed?",
+        "Do you have difficulty understanding facial expressions?",
+        "Do you prefer solitary activities over group activities?",
+        "Do you have difficulty with time management?",
+        "Do you experience difficulty with motor coordination?",
+        "Do you have difficulty understanding personal space boundaries?",
+        "Do you have difficulty with abstract thinking or conceptual reasoning?",
+        "Do you experience difficulty with executive functioning (planning, organizing)?",
+        "Do you have difficulty understanding nonverbal communication?",
+        "Do you experience difficulty with emotional regulation?",
+        "Do you have difficulty understanding social hierarchies or power dynamics?",
+        "Do you experience difficulty with impulse control?",
+        "Do you have difficulty understanding social reciprocity?",
+        "Do you experience difficulty with theory of mind (understanding others' perspectives)?",
+        "Do you have difficulty with pragmatic language skills?",
+        "Do you experience difficulty with social imagination?",
+        "Do you have difficulty understanding social context?",
+        "Do you experience difficulty with social problem-solving?",
+        "Do you have difficulty understanding social expectations?",
+        "Do you experience difficulty with social adaptation?",
+        "Do you have difficulty understanding social norms?",
+        "Do you experience difficulty with social integration?",
+        "Do you have difficulty understanding social relationships?",
+        "Do you experience difficulty with social communication?",
+        "Do you have difficulty understanding social boundaries?",
+        "Do you experience difficulty with social reciprocity?",
+        "Do you have difficulty understanding social cues?",
+        "Do you experience difficulty with social timing?",
+        "Do you have difficulty understanding social rules?",
+        "Do you experience difficulty with social flexibility?",
+        "Do you have difficulty understanding social context?",
+        "Do you experience difficulty with social adaptation?",
+        "Do you have difficulty understanding social expectations?",
+        "Do you experience difficulty with social problem-solving?",
+        "Do you have difficulty understanding social hierarchies?",
+        "Do you experience difficulty with social imagination?",
+        "Do you have difficulty understanding social relationships?",
+        "Do you experience difficulty with social integration?"
+    ]
+
+    # Randomly select 10 questions and shuffle their order
+    selected_questions = random.sample(all_questions, 10)
+    random.shuffle(selected_questions)
+
     score = 0
-    total_questions = 10
+    total_questions = len(selected_questions)
 
-    # Question 1
-    print("1. Do you find it difficult to understand social cues or body language?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 2
-    print("\n2. Do you have intense interests in specific topics that you can talk about for hours?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 3
-    print("\n3. Do you prefer routine and get upset when plans change unexpectedly?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 4
-    print("\n4. Do you find it challenging to maintain eye contact during conversations?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 5
-    print("\n5. Do you have difficulty understanding sarcasm or jokes?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 6
-    print("\n6. Do you experience sensory sensitivities (bright lights, loud sounds, certain textures)?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 7
-    print("\n7. Do you find it hard to start or maintain conversations with others?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 8
-    print("\n8. Do you prefer to spend time alone rather than in social situations?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 9
-    print("\n9. Do you have difficulty understanding other people's emotions or feelings?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
-
-    # Question 10
-    print("\n10. Do you engage in repetitive behaviors or movements (rocking, hand flapping, etc.)?")
-    answer = input("Enter 'yes' or 'no': ").lower().strip()
-    if answer == 'yes':
-        score += 1
+    # Ask the randomly selected questions
+    for i, question in enumerate(selected_questions, 1):
+        print(f"{i}. {question}")
+        answer = input("Enter 'yes' or 'no': ").lower().strip()
+        if answer == 'yes':
+            score += 1
+        print()  # Add spacing between questions
 
     # Calculate percentage
     percentage = (score / total_questions) * 100
